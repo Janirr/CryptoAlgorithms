@@ -1,0 +1,23 @@
+Sprawozdanie dotyczące algorytmu RSA
+1. Założenia
+Algorytm RSA opiera się na trudności faktoryzacji dużych liczb całkowitych na czynniki pierwsze. Dlatego też kluczowym założeniem jest generowanie bardzo dużych liczb pierwszych. W naszym programie użyliśmy liczb czterocyfrowych w celach demonstracyjnych, ale w praktyce klucze RSA mogą być znacznie większe, zwykle składają się z setek cyfr.
+
+2. Opis metod użytych do wyznaczania e i d
+Generowanie kluczy: Najpierw generujemy dwie duże liczby pierwsze (p i q). Następnie obliczamy ich iloczyn (n) oraz wartość funkcji Eulera (phi), która jest równa (p-1)*(q-1). Następnie losowo wybieramy liczbę e względnie pierwszą z phi, która będzie częścią klucza publicznego. Aby obliczyć klucz prywatny d, stosujemy odwrotność modulo liczby e względem phi.
+3. Opis realizacji zadań (programu i jego składowych) i wartości uzyskane podczas ich realizacji
+Generowanie liczb pierwszych: Wykorzystaliśmy prostą implementację testu pierwszości oraz algorytm generujący losowe liczby, aby wygenerować liczby pierwsze o czterech cyfrach.
+Szyfrowanie i odszyfrowywanie: Użyliśmy algorytmu RSA do szyfrowania i odszyfrowywania wiadomości. Szyfrowanie odbyło się za pomocą klucza publicznego, a odszyfrowanie - za pomocą klucza prywatnego.
+4. Odpowiedzi na pytania
+Jakie elementy algorytmu są trudne w realizacji?
+
+Generowanie bardzo dużych liczb pierwszych może być trudne i czasochłonne.
+Obliczanie odwrotności modulo (dla klucza prywatnego) może być kosztowne obliczeniowo.
+Co stanowi o bezpieczeństwie i jakości tego algorytmu szyfrowania?
+
+Trudność faktoryzacji dużych liczb na czynniki pierwsze, co stanowi podstawę algorytmu.
+Bezpieczeństwo klucza prywatnego, który jest znany tylko właścicielowi.
+5. Wnioski
+Algorytm RSA jest jednym z najbezpieczniejszych algorytmów asymetrycznego szyfrowania, ale jego wydajność zależy od wielkości użytych kluczy.
+Bezpieczeństwo algorytmu RSA opiera się na trudności faktoryzacji dużych liczb na czynniki pierwsze.
+Kluczem do skutecznego wykorzystania RSA jest odpowiedni dobór wielkości kluczy - im większe, tym bezpieczniejsze, ale jednocześnie bardziej wymagające obliczeniowo.
+Ważne jest również odpowiednie zarządzanie kluczami, aby zachować bezpieczeństwo systemu.
